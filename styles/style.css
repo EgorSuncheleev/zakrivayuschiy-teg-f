@@ -92,9 +92,22 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-weight: 400;
-  -webkit-text-stroke: 1px var(--background-color);
   line-height: 100%;
-}
+
+  text-shadow: 
+    -1px 0 var(--background-color), 
+    0 1px var(--background-color), 
+    1px 0 var(--background-color), 
+    0 -1px var(--background-color);
+  }
+
+  @supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+  .card__item_watermark {
+      -webkit-text-stroke: 1px var(--background-color);
+      text-shadow: none;
+  }
+} 
+
 
 .card__text {
   display: flex;
@@ -282,6 +295,6 @@
 
 .img8 {
   background-image: url(/images/card-img8.avif);
-  filter: saturate(390%);
+  filter: saturate(390%) opacity(40%);
 }
 /* Картинки */
