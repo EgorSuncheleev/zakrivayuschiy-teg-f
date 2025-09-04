@@ -68,31 +68,16 @@
   font-size: 18px;
 }
 
-.card__main-img {
-  background-image: url(/images/card-image1.png);
-  height: 696px;
-  background-size: cover;
-  background-position: right;
-  border-bottom: 2px solid black;
-  position: relative;
-  filter: none;
-}
-
-.card__main-img::after {
+.card__main-img-leibl {
   /* HTML элемент на карточке */
-  content: "</html>";
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  z-index: 5;
   font-family: var(--font-family-main);
   font-size: 14px;
-  color: #000000;
-  text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  font-weight: 400;
-  line-height: 100%;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 5;
 
   text-shadow: 
     -1px 0 var(--background-color), 
@@ -149,7 +134,7 @@
   border: 2px solid var(--accent-color);
   background-color: transparent;
   line-height: 90%;
-  transition: all 0.5s;
+  transition: 0.5s;
   font-size: 14px;
 }
 
@@ -263,38 +248,43 @@
 
 /* Картинки */
 
-.img2 {
-  background-image: url(/images/card_img2.avif);
+.card__main-img-leibl-parants {
+  position: relative;
+}
+
+.card__main-img {
+  width: 100%;
+  height: 696px;
+  display: block;
+  object-fit: cover;
+  object-position: right;
+}
+
+.grayscale {
   filter: grayscale(80%);
 }
 
-.img3 {
-  background-image: url(/images/card_img3.avif);
+.blur {
   filter: blur(3px);
 }
 
-.img4 {
-  background-image: url(/images/card_img4.avif);
+.brightness {
   filter: brightness(30%);
 }
 
-.img5 {
-  background-image: url(/images/card-img5.avif);
+.contrast {
   filter: contrast(250%);
 }
 
-.img6 {
-  background-image: url(/images/card-img6.avif);
+.hue-rotate {
   filter: hue-rotate(0.5turn);
 }
 
-.img7 {
-  background-image: url(/images/card-img7.avif);
+.opacity {
   filter: opacity(90%);
 }
 
-.img8 {
-  background-image: url(/images/card-img8.avif);
+.saturate-opacity {
   filter: saturate(390%) opacity(40%);
 }
 /* Картинки */
