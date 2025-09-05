@@ -31,7 +31,7 @@
   justify-content: center;
   max-width: 700px;
   width: 100%;
-  height: 368px;
+  padding: 133px 122px;
   border: 2px solid #000000;
   margin: 100px 0 100px 0;
 }
@@ -50,6 +50,7 @@
 .section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .card {
@@ -107,6 +108,7 @@
   align-items: center;
   justify-content: end;
   margin: 0 25px 25px 0;
+  gap: 7px ;
 }
 
 .card__icon-button {
@@ -119,6 +121,11 @@
   align-items: center;
   justify-content: center;
   transition: border 0.3s ease;
+  padding: 0;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 .card__like-button {
@@ -140,14 +147,8 @@
 
 /* dialog and footer */
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 100px;
-}
-
 .save__button {
+  align-self: center;
   padding: 17px 20px;
   border: 2px solid var(--accent-color);
   display: flex;
@@ -220,31 +221,11 @@
   opacity: 75%;
 }
 
-/* dialog and footer */
-
-/* Медиазапросы */
-
-@media (width <= 375px) {
-  .header__title {
-    font-size: 49px;
-  }
-
-  .header__subtitle {
-    text-transform: uppercase;
-    font-size: 14px;
-  }
-
-  .save__button {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card__main-img {
-    height: 371px;
-  }
+.button__text {
+  text-transform: uppercase;
 }
 
-/* Медиазапросы */
+/* dialog and footer */
 
 /* Картинки */
 
@@ -288,3 +269,32 @@
   filter: saturate(390%) opacity(40%);
 }
 /* Картинки */
+
+/* Медиазапросы */
+
+@media (width <= 375px) {
+
+  .header {
+    padding: 122px 16px;
+  }
+
+  .header__title {
+    font-size: 49px;
+  }
+
+  .header__subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .save__button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__main-img {
+    height: 371px;
+  }
+}
+
+/* Медиазапросы */
