@@ -195,9 +195,8 @@
 }
 
 .modal-window__floppy_image {
-  width: 67px;
-  height: 40px;
-  stroke: var(--accent-color);
+  width: 39px;
+  height: 39px;
 }
 
 .modal-window__text {
@@ -221,7 +220,7 @@
   opacity: 75%;
 }
 
-.button__text {
+.button__text-uppercase {
   text-transform: uppercase;
 }
 
@@ -294,6 +293,11 @@
 
   .card__main-img {
     height: 371px;
+  }
+
+  .floppy__image {
+  height: 28px;
+  width: 28px;
   }
 }
 
